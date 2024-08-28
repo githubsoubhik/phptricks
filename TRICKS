@@ -1,0 +1,10 @@
+  // Format the created_at date to dd-mm-yyyy and time
+        $formatted_date = date('d-m-Y H:i:s', strtotime($row['created_at']));
+
+
+// Query to select all columns from the product_stock table, ordered by latest entry date
+$sql = "SELECT *
+        FROM product_stock
+        ORDER BY created_at DESC";
+
+$warranty_status = ($row['warranty'] > 0) ? 'Yes' : 'No';
