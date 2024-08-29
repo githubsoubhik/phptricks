@@ -8,3 +8,17 @@ $sql = "SELECT *
         ORDER BY created_at DESC";
 
 $warranty_status = ($row['warranty'] > 0) ? 'Yes' : 'No';
+
+
+
+           //split name 
+            // Split the string into an array using space as the delimiter
+$product_parts = explode(' ', $product_string);
+
+// The last element of the array is the model number
+$model_no = array_pop($product_parts);
+
+// The remaining elements are the product name
+$product_name = implode(' ', $product_parts);
+
+
